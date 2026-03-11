@@ -1,0 +1,80 @@
+{
+  "name": "@aws/durable-execution-sdk-js-examples",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "repository": "ssh:github.com/aws/aws-durable-execution-sdk-js/tree/main/packages/aws-durable-execution-sdk-js-examples",
+  "homepage": "https://github.com/aws/aws-durable-execution-sdk-js/tree/main/packages/aws-durable-execution-sdk-js-examples",
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "./*": {
+      "require": "./dist/examples/*",
+      "types": "./dist/examples/*"
+    },
+    "./catalog": {
+      "require": "./dist/examples-catalog.js",
+      "import": "./dist/examples-catalog.js",
+      "types": "./dist/utils/examples-catalog.d.ts"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf build/ build coverage node_modules/ dist/ *.zip .tsbuildinfo .rollup.cache",
+    "release": "npm run build && mkdir -p build/aws-durable-execution-sdk-js-examples && npm run copy-files",
+    "prebuild": "rm -rf build/aws-durable-execution-sdk-js-examples",
+    "postbuild": "npm run generate-sam-template",
+    "package": "node scripts/package.js",
+    "generate-examples": "tsx ./scripts/generate-examples.ts",
+    "build": "npm run generate-examples && rollup --config rollup.config.mjs --silent && tsc --noEmit",
+    "deploy": "tsx scripts/deploy-lambda.ts",
+    "prerelease": "npm run generate-sam-template",
+    "copy-files": "npm run copy-lambda && npm run copy-examples && npm run copy-source && npm run copy-catalog",
+    "copy-lambda": "cp -r configuration/aws_lambda build",
+    "copy-examples": "cp -r dist/examples/*.js dist/examples/*.js.map build/aws-durable-execution-sdk-js-examples",
+    "copy-source": "mkdir -p build/source && cp -r src/examples/*.ts build/source/",
+    "copy-catalog": "cp examples-catalog.json build/aws-durable-execution-sdk-js-examples/",
+    "generate-sam-template": "node scripts/generate-sam-template.js",
+    "test": "npm run unit-test",
+    "test:integration": "NODE_ENV=integration jest --config jest.config.integration.js",
+    "pretest-with-sdk-coverage": "node scripts/copy-sdk-source.js",
+    "test-with-sdk-coverage": "jest --config jest.config.sdk-coverage.js --collectCoverage",
+    "coverage-to-csv": "node scripts/coverage-to-csv.js",
+    "unit-test": "jest --collectCoverage",
+    "unit-test-watch": "jest --watch",
+    "prettier": "prettier --write './src/**/*.*' && prettier --write './test/**/*.*'"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.29.0",
+    "@aws-sdk/client-dynamodb": "^3.943.0",
+    "@aws-sdk/client-lambda": "^3.943.0",
+    "@aws/durable-execution-sdk-js": "*",
+    "@aws/durable-execution-sdk-js-testing": "*",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@aws/durable-execution-sdk-js-eslint-plugin": "*",
+    "@eslint/js": "^9.23.0",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.2",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/argparse": "^2.0.17",
+    "@types/aws-lambda": "^8.10.145",
+    "@types/jest": "^29.5.14",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.13.5",
+    "argparse": "^2.0.1",
+    "eslint": "^9.23.0",
+    "jest": "^29.7.0",
+    "js-yaml": "^4.1.0",
+    "prettier": "^3.5.2",
+    "ts-jest": "^29.2.6",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.29.0"
+  },
+  "private": true
+}

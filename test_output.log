@@ -1,0 +1,993 @@
+
+> aws-durable-execution-sdk-js@0.0.1 test
+> npm run test -w packages/aws-durable-execution-sdk-js && npm run test -w packages/aws-durable-execution-sdk-js-testing && npm run test -w packages/aws-durable-execution-sdk-js-examples && npm run test -w packages/aws-durable-execution-sdk-js-eslint-plugin
+
+
+> @aws/durable-execution-sdk-js@2.0.0-alpha.1 test
+> jest
+
+PASS Library Tests src/handlers/run-in-child-context-handler/run-in-child-context-handler.test.ts
+PASS Library Tests src/utils/logger/default-logger.test.ts
+PASS Library Tests src/context/durable-context/durable-context.unit.test.ts
+PASS Library Tests src/handlers/concurrent-execution-handler/concurrent-execution-handler.test.ts (5.084 s)
+PASS Library Tests src/context/execution-context/execution-context.test.ts (5.196 s)
+PASS Library Tests src/handlers/concurrent-execution-handler/concurrent-execution-handler.replay.test.ts (5.231 s)
+PASS Library Tests src/handlers/callback-handler/callback.test.ts (5.26 s)
+PASS Library Tests src/utils/checkpoint/checkpoint-central-termination.test.ts (5.268 s)
+PASS Library Tests src/utils/checkpoint/checkpoint.test.ts (5.502 s)
+PASS Library Tests src/handlers/invoke-handler/invoke-handler.test.ts
+PASS Library Tests src/utils/checkpoint/checkpoint-error-classification.test.ts
+PASS Library Tests src/handlers/invoke-handler/invoke-handler-two-phase.test.ts
+PASS Library Tests src/handlers/wait-handler/wait-handler.test.ts
+PASS Library Tests src/utils/checkpoint/checkpoint-queue-completion.test.ts
+PASS Library Tests src/termination-manager/termination-manager-checkpoint.test.ts
+PASS Library Tests src/with-durable-execution.test.ts
+PASS Library Tests src/handlers/step-handler/step-handler.timing.test.ts
+PASS Library Tests src/handlers/wait-handler/wait-handler-two-phase.test.ts
+PASS Library Tests src/utils/checkpoint/checkpoint-termination.test.ts
+PASS Library Tests src/handlers/callback-handler/callback-promise.test.ts
+PASS Library Tests src/errors/serdes-errors/serdes-errors.test.ts
+PASS Library Tests src/context/durable-context/durable-context.integration.test.ts
+PASS Library Tests src/context/durable-context/durable-context.test.ts
+PASS Library Tests src/handlers/wait-for-condition-handler/wait-for-condition-handler.test.ts
+PASS Library Tests src/handlers/wait-for-condition-handler/wait-for-condition-handler-two-phase.test.ts
+PASS Library Tests src/utils/replay-validation/replay-validation.test.ts
+PASS Library Tests src/durable-execution-api-client/durable-execution-api-client.test.ts
+PASS Library Tests src/durable-execution-api-client/durable-execution-api-client-caching.test.ts
+PASS Library Tests src/utils/checkpoint/checkpoint-stepdata-update.test.ts
+PASS Library Tests src/utils/step-id-utils/step-id-utils.test.ts
+PASS Library Tests src/handlers/wait-handler/wait-handler-comparison.test.ts
+PASS Library Tests src/utils/checkpoint/checkpoint-ancestor.test.ts
+PASS Library Tests src/utils/checkpoint/checkpoint-integration.test.ts
+PASS Library Tests src/handlers/step-handler/step-handler-two-phase.test.ts
+PASS Library Tests src/handlers/parallel-handler/parallel-handler-two-phase.test.ts
+PASS Library Tests src/handlers/concurrent-execution-handler/concurrent-execution-handler-two-phase.test.ts
+PASS Library Tests src/with-durable-execution-queue-completion.test.ts
+PASS Library Tests src/handlers/wait-for-condition-handler/wait-for-condition-handler.timing.test.ts
+PASS Library Tests src/handlers/map-handler/map-handler-two-phase.test.ts
+PASS Library Tests src/handlers/concurrent-execution-handler/concurrent-execution-handler.integration.test.ts
+PASS Library Tests src/context/durable-context/logger-property.test.ts
+PASS Library Tests src/handlers/step-handler/step-handler.test.ts
+PASS Library Tests src/handlers/wait-for-callback-handler/wait-for-callback-handler.test.ts
+PASS Library Tests src/handlers/concurrent-execution-handler/batch-result.test.ts
+PASS Library Tests src/handlers/parallel-handler/parallel-handler.test.ts
+PASS Library Tests src/errors/checkpoint-errors/checkpoint-errors.test.ts
+PASS Library Tests src/context/durable-context/mode-management/mode-management.test.ts
+PASS Library Tests src/context/durable-context/logger-mode-aware.test.ts
+PASS Library Tests src/handlers/promise-handler/promise-handler.test.ts
+PASS Library Tests src/utils/summary-generators/summary-generators.test.ts
+{"timestamp":"2026-03-11T22:29:13.922Z","level":"INFO","executionArn":"test-arn","message":"replay message"}
+PASS Library Tests src/handlers/run-in-child-context-handler/run-in-child-context-integration.test.ts
+PASS Library Tests src/termination-manager/termination-manager.test.ts
+PASS Library Tests src/utils/serdes/serdes.test.ts
+PASS Library Tests src/errors/callback-error/callback-error.test.ts
+PASS Library Tests src/errors/durable-error/error-determinism.integration.test.ts
+PASS Library Tests src/utils/retry/retry-config/index.test.ts
+PASS Library Tests src/errors/durable-error/durable-error-coverage.test.ts
+PASS Library Tests src/utils/termination-helper/termination-helper.test.ts
+PASS Library Tests src/errors/durable-error/durable-error.test.ts
+PASS Library Tests src/utils/context-tracker/context-tracker.test.ts
+PASS Library Tests src/utils/safe-stringify/safe-stringify.test.ts
+PASS Library Tests src/utils/wait-strategy/wait-strategy-config.test.ts
+PASS Library Tests src/utils/error-object/error-object.test.ts
+PASS Library Tests src/utils/durable-execution-invocation-input/durable-execution-invocation-input.test.ts
+PASS Library Tests src/utils/termination-helper/termination-deferral.test.ts
+PASS Library Tests src/handlers/run-in-child-context-handler/run-in-child-context-handler-two-phase.test.ts
+PASS Library Tests src/utils/error-object/error-object-coverage.test.ts
+PASS Library Tests src/handlers/map-handler/map-handler.test.ts
+PASS Library Tests src/utils/logger/logger.test.ts
+PASS Library Tests src/errors/unrecoverable-error/unrecoverable-error.test.ts
+PASS Library Tests src/utils/logger/structured-logger-integration.test.ts
+PASS Library Tests src/utils/duration/duration.test.ts
+----------------------------------------------|---------|----------|---------|---------|-------------------------------------
+File                                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                   
+----------------------------------------------|---------|----------|---------|---------|-------------------------------------
+All files                                     |   94.02 |     86.8 |   92.95 |   94.05 |                                     
+ src                                          |   94.62 |    85.71 |      90 |   94.56 |                                     
+  with-durable-execution.ts                   |   94.62 |    85.71 |      90 |   94.56 | 59,161-162,209,258                  
+ src/context/durable-context                  |   97.79 |      100 |   91.48 |   97.77 |                                     
+  durable-context.ts                          |   97.79 |      100 |   91.48 |   97.77 | 111,213,257                         
+ src/context/durable-context/mode-management  |   92.85 |      100 |      75 |   92.59 |                                     
+  mode-management.ts                          |   92.85 |      100 |      75 |   92.59 | 38-40                               
+ src/context/execution-context                |     100 |      100 |     100 |     100 |                                     
+  execution-context.ts                        |     100 |      100 |     100 |     100 |                                     
+ src/durable-execution-api-client             |     100 |      100 |     100 |     100 |                                     
+  durable-execution-api-client.ts             |     100 |      100 |     100 |     100 |                                     
+ src/errors/checkpoint-errors                 |     100 |      100 |     100 |     100 |                                     
+  checkpoint-errors.ts                        |     100 |      100 |     100 |     100 |                                     
+ src/errors/durable-error                     |   77.77 |    46.93 |   72.72 |   77.77 |                                     
+  durable-error.ts                            |   77.77 |    46.93 |   72.72 |   77.77 | 22,49-55,73,143-146,179-182,191-194 
+ src/errors/non-deterministic-error           |     100 |      100 |     100 |     100 |                                     
+  non-deterministic-error.ts                  |     100 |      100 |     100 |     100 |                                     
+ src/errors/serdes-errors                     |     100 |      100 |     100 |     100 |                                     
+  serdes-errors.ts                            |     100 |      100 |     100 |     100 |                                     
+ src/errors/step-errors                       |   33.33 |      100 |       0 |   33.33 |                                     
+  step-errors.ts                              |   33.33 |      100 |       0 |   33.33 | 8-11                                
+ src/errors/unrecoverable-error               |     100 |      100 |     100 |     100 |                                     
+  unrecoverable-error.ts                      |     100 |      100 |     100 |     100 |                                     
+ src/handlers/callback-handler                |     100 |    86.48 |    92.3 |     100 |                                     
+  callback-promise.ts                         |     100 |    71.42 |     100 |     100 | 65-68                               
+  callback.ts                                 |     100 |       90 |    90.9 |     100 | 200,205-212                         
+ src/handlers/concurrent-execution-handler    |   99.13 |    96.42 |     100 |     100 |                                     
+  batch-result.ts                             |   95.83 |    84.21 |     100 |     100 | 146-166                             
+  concurrent-execution-handler.ts             |     100 |    98.92 |     100 |     100 | 239                                 
+ src/handlers/invoke-handler                  |   90.76 |    79.48 |      80 |   90.62 |                                     
+  invoke-handler.ts                           |   90.76 |    79.48 |      80 |   90.62 | 249-263                             
+ src/handlers/map-handler                     |     100 |      100 |     100 |     100 |                                     
+  map-handler.ts                              |     100 |      100 |     100 |     100 |                                     
+ src/handlers/parallel-handler                |     100 |      100 |     100 |     100 |                                     
+  parallel-handler.ts                         |     100 |      100 |     100 |     100 |                                     
+ src/handlers/promise-handler                 |   91.66 |      100 |      84 |   90.47 |                                     
+  promise-handler.ts                          |   91.66 |      100 |      84 |   90.47 | 106,122,137,152                     
+ src/handlers/run-in-child-context-handler    |   95.28 |       88 |     100 |   95.09 |                                     
+  run-in-child-context-handler.ts             |   95.28 |       88 |     100 |   95.09 | 49,56,215,348,423                   
+ src/handlers/step-handler                    |   70.65 |     43.9 |   88.88 |   70.32 |                                     
+  step-handler.ts                             |   70.65 |     43.9 |   88.88 |   70.32 | 126,157-216,308-379                 
+ src/handlers/wait-for-callback-handler       |   88.63 |    77.77 |      90 |   88.37 |                                     
+  wait-for-callback-handler.ts                |   88.63 |    77.77 |      90 |   88.37 | 136-150                             
+ src/handlers/wait-for-condition-handler      |    92.1 |    95.65 |     100 |      92 |                                     
+  wait-for-condition-handler.ts               |    92.1 |    95.65 |     100 |      92 | 118,167-170,289-302                 
+ src/handlers/wait-handler                    |   97.77 |      100 |      80 |   97.72 |                                     
+  wait-handler.ts                             |   97.77 |      100 |      80 |   97.72 | 162                                 
+ src/termination-manager                      |   96.77 |      100 |   85.71 |   96.66 |                                     
+  termination-manager.ts                      |   95.23 |      100 |   83.33 |      95 | 39                                  
+  types.ts                                    |     100 |      100 |     100 |     100 |                                     
+ src/types                                    |   97.22 |      100 |    87.5 |   97.22 |                                     
+  batch.ts                                    |     100 |      100 |     100 |     100 |                                     
+  core.ts                                     |     100 |      100 |     100 |     100 |                                     
+  durable-promise.ts                          |   84.61 |      100 |   71.42 |   84.61 | 107-112                             
+  index.ts                                    |     100 |      100 |     100 |     100 |                                     
+  logger.ts                                   |     100 |      100 |     100 |     100 |                                     
+  operation-lifecycle-state.ts                |     100 |      100 |     100 |     100 |                                     
+  step.ts                                     |     100 |      100 |     100 |     100 |                                     
+ src/utils/checkpoint                         |   88.27 |    84.74 |   91.52 |   88.81 |                                     
+  checkpoint-manager.ts                       |   88.27 |    84.74 |   91.52 |   88.81 | 157,183,435-443,486,794-850         
+ src/utils/constants                          |     100 |      100 |     100 |     100 |                                     
+  constants.ts                                |     100 |      100 |     100 |     100 |                                     
+  version.ts                                  |     100 |      100 |     100 |     100 |                                     
+ src/utils/context-tracker                    |     100 |      100 |     100 |     100 |                                     
+  context-tracker.ts                          |     100 |      100 |     100 |     100 |                                     
+ src/utils/durable-execution-invocation-input |     100 |      100 |     100 |     100 |                                     
+  durable-execution-invocation-input.ts       |     100 |      100 |     100 |     100 |                                     
+ src/utils/duration                           |     100 |       75 |     100 |     100 |                                     
+  duration.ts                                 |     100 |       75 |     100 |     100 | 9-12                                
+ src/utils/error-object                       |     100 |       90 |     100 |     100 |                                     
+  error-object.ts                             |     100 |       90 |     100 |     100 | 33                                  
+ src/utils/logger                             |    98.9 |    91.11 |     100 |   98.87 |                                     
+  default-logger.ts                           |   98.83 |    90.47 |     100 |   98.82 | 295                                 
+  logger.ts                                   |     100 |      100 |     100 |     100 |                                     
+ src/utils/replay-validation                  |     100 |      100 |     100 |     100 |                                     
+  replay-validation.ts                        |     100 |      100 |     100 |     100 |                                     
+ src/utils/retry/retry-config                 |     100 |      100 |     100 |     100 |                                     
+  index.ts                                    |     100 |      100 |     100 |     100 |                                     
+ src/utils/retry/retry-presets                |     100 |      100 |     100 |     100 |                                     
+  retry-presets.ts                            |     100 |      100 |     100 |     100 |                                     
+ src/utils/safe-stringify                     |     100 |      100 |     100 |     100 |                                     
+  safe-stringify.ts                           |     100 |      100 |     100 |     100 |                                     
+ src/utils/serdes                             |     100 |      100 |     100 |     100 |                                     
+  serdes.ts                                   |     100 |      100 |     100 |     100 |                                     
+ src/utils/step-id-utils                      |     100 |      100 |     100 |     100 |                                     
+  step-id-utils.ts                            |     100 |      100 |     100 |     100 |                                     
+ src/utils/summary-generators                 |     100 |      100 |     100 |     100 |                                     
+  summary-generators.ts                       |     100 |      100 |     100 |     100 |                                     
+ src/utils/termination-helper                 |     100 |      100 |     100 |     100 |                                     
+  termination-helper.ts                       |     100 |      100 |     100 |     100 |                                     
+ src/utils/wait-strategy                      |     100 |      100 |     100 |     100 |                                     
+  wait-strategy-config.ts                     |     100 |      100 |     100 |     100 |                                     
+----------------------------------------------|---------|----------|---------|---------|-------------------------------------
+
+Test Suites: 72 passed, 72 total
+Tests:       790 passed, 790 total
+Snapshots:   0 total
+Time:        12.101 s
+Ran all test suites.
+
+> @aws/durable-execution-sdk-js-testing@1.1.1 test
+> tsc --noEmit && jest --config jest.config.mjs --collectCoverage --collectCoverageFrom=src/**/*.{ts,js}
+
+PASS src/test-runner/local/operations/__tests__/operation-wait-manager.test.ts
+PASS src/checkpoint-server/storage/__tests__/checkpoint-manager-update.test.ts
+PASS src/test-runner/common/operations/__tests__/operation-with-data.test.ts
+PASS src/test-runner/cloud/utils/__tests__/history-poller.test.ts
+PASS src/checkpoint-server/storage/__tests__/checkpoint-manager-invocation.test.ts
+PASS src/checkpoint-server/storage/__tests__/execution-manager.test.ts
+PASS src/checkpoint-server/handlers/__tests__/execution-handlers.test.ts
+PASS src/test-runner/cloud/utils/process-history-events/__tests__/history-event-types.test.ts
+PASS src/test-runner/common/__tests__/test-execution-state.test.ts
+PASS src/test-runner/common/__tests__/operation-storage.test.ts
+PASS src/test-runner/cloud/utils/process-terminal-event/__tests__/process-terminal-event.test.ts
+PASS src/checkpoint-server/storage/__tests__/checkpoint-manager-complete.test.ts
+PASS src/checkpoint-server/storage/__tests__/checkpoint-manager.test.ts
+PASS src/test-runner/cloud/utils/process-history-events/__tests__/operation-factory.test.ts
+PASS src/checkpoint-server/validators/operation-type/__tests__/validate-wait-operation.test.ts
+PASS src/checkpoint-server/validators/operation-type/__tests__/validate-context-operation.test.ts
+PASS src/checkpoint-server/validators/operation-type/__tests__/validate-step-operation.test.ts
+PASS src/test-runner/local/__tests__/test-execution-orchestrator-pending-rejection.test.ts
+PASS src/test-runner/local/__tests__/index.test.ts
+PASS src/test-runner/local/__tests__/test-execution-orchestrator-invocation-order.test.ts
+PASS src/checkpoint-server/validators/operation-type/__tests__/validate-execution-operation.test.ts
+PASS src/cli/run-durable/__tests__/index.test.ts
+PASS src/test-runner/local/__tests__/integration/local-durable-test-runner.integration.test.ts
+PASS src/test-runner/local/__tests__/invoke-handler.test.ts
+PASS src/test-runner/local/operations/__tests__/status-matcher.test.ts
+PASS src/__tests__/index.test.ts
+PASS src/test-runner/local/operations/__tests__/local-operation-storage.test.ts
+PASS src/test-runner/cloud/__tests__/cloud-durable-test-runner.test.ts
+PASS src/test-runner/local/__tests__/integration/wait-for-callback-operations.integration.test.ts
+PASS src/checkpoint-server/worker-api/__tests__/worker-server-api-handler.test.ts
+PASS src/test-runner/local/worker/__tests__/checkpoint-worker-manager.test.ts
+PASS src/test-runner/local/__tests__/integration/invoke.integration.test.ts
+PASS src/checkpoint-server/worker/__tests__/checkpoint-worker.test.ts
+PASS src/test-runner/local/operations/__tests__/function-storage.test.ts
+PASS src/test-runner/cloud/utils/process-history-events/__tests__/event-data-extractors.test.ts
+PASS src/test-runner/cloud/utils/process-history-events/__tests__/process-history-events.test.ts
+PASS src/checkpoint-server/validators/operation-type/__tests__/validate-callback-operation.test.ts
+PASS src/checkpoint-server/validators/__tests__/valid-actions-by-operation-type-validator.test.ts
+PASS src/test-runner/common/__tests__/indexed-operations.test.ts
+PASS src/test-runner/local/orchestration/__tests__/queue-scheduler.test.ts
+PASS src/checkpoint-server/validators/operation-type/__tests__/validate-invoke-operation.test.ts
+PASS src/__tests__/utils.test.ts
+PASS src/checkpoint-server/utils/__tests__/callback-id.test.ts
+PASS src/test-runner/common/__tests__/utils.test.ts
+PASS src/test-runner/local/worker/__tests__/worker-client-api-handler.test.ts
+PASS src/checkpoint-server/utils/__tests__/history-event-details.test.ts
+PASS src/__tests__/logger.test.ts
+PASS src/checkpoint-server/storage/__tests__/checkpoint-manager-register.test.ts
+PASS src/test-runner/local/orchestration/__tests__/timer-scheduler.test.ts
+PASS src/checkpoint-server/handlers/__tests__/state-handlers.test.ts
+PASS src/cli/run-durable/utils/__tests__/validation.test.ts
+PASS src/cli/run-durable/utils/__tests__/output.test.ts
+PASS src/test-runner/cloud/utils/process-history-events/__tests__/operation-details.test.ts
+PASS src/test-runner/local/operations/__tests__/invocation-tracker.test.ts
+PASS src/cli/run-durable/utils/__tests__/cli-config.test.ts
+PASS src/cli/run-durable/__tests__/run-durable.test.ts
+PASS src/checkpoint-server/__tests__/checkpoint-token.test.ts
+PASS src/checkpoint-server/storage/__tests__/callback-manager.test.ts
+PASS src/test-runner/common/__tests__/create-durable-api-client.test.ts
+PASS src/checkpoint-server/storage/__tests__/checkpoint-manager-dirty.test.ts
+PASS src/checkpoint-server/validators/__tests__/checkpoint-durable-execution-input-validator.test.ts
+PASS src/checkpoint-server/handlers/__tests__/callbacks.test.ts
+PASS src/test-runner/local/__tests__/local-durable-test-runner.test.ts
+PASS src/checkpoint-server/handlers/__tests__/checkpoint-handlers.test.ts
+PASS src/test-runner/local/__tests__/result-formatter.test.ts
+PASS src/test-runner/cloud/operations/__tests__/cloud-operation.test.ts
+PASS src/checkpoint-server/storage/__tests__/event-processor.test.ts
+PASS src/test-runner/local/__tests__/test-execution-orchestrator.test.ts (5.072 s)
+----------------------------------------------------|---------|----------|---------|---------|------------------------------------------------------------
+File                                                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                                          
+----------------------------------------------------|---------|----------|---------|---------|------------------------------------------------------------
+All files                                           |   94.74 |    89.56 |   92.62 |   95.11 |                                                            
+ src                                                |   97.75 |    95.45 |   81.81 |   97.59 |                                                            
+  index.ts                                          |     100 |      100 |       0 |     100 |                                                            
+  logger.ts                                         |     100 |    97.67 |     100 |     100 | 65                                                         
+  utils.ts                                          |   93.33 |     91.3 |     100 |   92.85 | 63,72                                                      
+ src/checkpoint-server                              |       0 |        0 |     100 |       0 |                                                            
+  index.ts                                          |       0 |        0 |     100 |       0 | 1-7                                                        
+ src/checkpoint-server/handlers                     |     100 |    96.15 |     100 |     100 |                                                            
+  callbacks.ts                                      |     100 |      100 |     100 |     100 |                                                            
+  checkpoint-handlers.ts                            |     100 |    91.66 |     100 |     100 | 95                                                         
+  execution-handlers.ts                             |     100 |      100 |     100 |     100 |                                                            
+  state-handlers.ts                                 |     100 |      100 |     100 |     100 |                                                            
+ src/checkpoint-server/storage                      |    97.4 |    94.06 |   96.07 |   97.39 |                                                            
+  callback-manager.ts                               |   98.48 |      100 |   92.85 |   98.48 | 212                                                        
+  chained-invoke-details.ts                         |     100 |      100 |     100 |     100 |                                                            
+  checkpoint-manager.ts                             |   96.02 |    91.86 |   96.15 |      96 | 61,195,209,228,276,393,408                                 
+  event-processor.ts                                |     100 |      100 |     100 |     100 |                                                            
+  execution-details.ts                              |     100 |      100 |     100 |     100 |                                                            
+  execution-manager.ts                              |     100 |      100 |     100 |     100 |                                                            
+  wait-details.ts                                   |     100 |      100 |     100 |     100 |                                                            
+ src/checkpoint-server/utils                        |     100 |    92.59 |     100 |     100 |                                                            
+  callback-id.ts                                    |     100 |    88.88 |     100 |     100 | 33                                                         
+  checkpoint-token.ts                               |     100 |     87.5 |     100 |     100 | 39                                                         
+  history-event-details.ts                          |     100 |      100 |     100 |     100 |                                                            
+  tagged-strings.ts                                 |     100 |      100 |     100 |     100 |                                                            
+ src/checkpoint-server/validators                   |   97.02 |     90.9 |     100 |   97.02 |                                                            
+  checkpoint-durable-execution-input-validator.ts   |    96.1 |    88.63 |     100 |    96.1 | 179,193,269                                                
+  valid-actions-by-operation-type-validator.ts      |     100 |      100 |     100 |     100 |                                                            
+ src/checkpoint-server/validators/operation-type    |     100 |      100 |     100 |     100 |                                                            
+  validate-callback-operation.ts                    |     100 |      100 |     100 |     100 |                                                            
+  validate-chained-invoke-operation.ts              |     100 |      100 |     100 |     100 |                                                            
+  validate-context-operation.ts                     |     100 |      100 |     100 |     100 |                                                            
+  validate-execution-operation.ts                   |     100 |      100 |     100 |     100 |                                                            
+  validate-step-operation.ts                        |     100 |      100 |     100 |     100 |                                                            
+  validate-wait-operation.ts                        |     100 |      100 |     100 |     100 |                                                            
+ src/checkpoint-server/worker                       |     100 |      100 |     100 |     100 |                                                            
+  checkpoint-worker.ts                              |     100 |      100 |     100 |     100 |                                                            
+  worker-message-types.ts                           |     100 |      100 |     100 |     100 |                                                            
+ src/checkpoint-server/worker-api                   |   94.87 |      100 |     100 |   94.87 |                                                            
+  worker-api-request.ts                             |       0 |      100 |     100 |       0 | 11                                                         
+  worker-api-response.ts                            |       0 |      100 |     100 |       0 | 10                                                         
+  worker-api-types.ts                               |     100 |      100 |     100 |     100 |                                                            
+  worker-server-api-handler.ts                      |     100 |      100 |     100 |     100 |                                                            
+ src/cli/run-durable                                |   84.61 |    16.66 |     100 |   84.61 |                                                            
+  index.ts                                          |   83.33 |       50 |     100 |   83.33 | 8                                                          
+  run-durable.ts                                    |      85 |        0 |     100 |      85 | 55-58                                                      
+ src/cli/run-durable/utils                          |   94.64 |      100 |      80 |   96.29 |                                                            
+  cli-config.ts                                     |     100 |      100 |     100 |     100 |                                                            
+  output.ts                                         |     100 |      100 |     100 |     100 |                                                            
+  validation.ts                                     |   89.28 |      100 |   66.66 |    92.3 | 75-76                                                      
+ src/test-runner                                    |     100 |      100 |       0 |     100 |                                                            
+  index.ts                                          |     100 |      100 |       0 |     100 |                                                            
+ src/test-runner/cloud                              |   94.69 |    86.36 |      92 |   95.49 |                                                            
+  cloud-durable-test-runner.ts                      |   89.58 |    83.33 |      80 |   91.48 | 166,363-365                                                
+  history-poller.ts                                 |   98.43 |     87.5 |     100 |   98.41 | 140                                                        
+  index.ts                                          |     100 |      100 |     100 |     100 |                                                            
+ src/test-runner/cloud/operations                   |     100 |      100 |     100 |     100 |                                                            
+  cloud-operation.ts                                |     100 |      100 |     100 |     100 |                                                            
+ src/test-runner/cloud/utils/process-history-events |     100 |      100 |     100 |     100 |                                                            
+  event-data-extractors.ts                          |     100 |      100 |     100 |     100 |                                                            
+  history-event-types.ts                            |     100 |      100 |     100 |     100 |                                                            
+  operation-details.ts                              |     100 |      100 |     100 |     100 |                                                            
+  operation-factory.ts                              |     100 |      100 |     100 |     100 |                                                            
+  process-history-events.ts                         |     100 |      100 |     100 |     100 |                                                            
+ src/test-runner/cloud/utils/process-terminal-event |     100 |      100 |     100 |     100 |                                                            
+  process-terminal-event.ts                         |     100 |      100 |     100 |     100 |                                                            
+ src/test-runner/common                             |     100 |      100 |     100 |     100 |                                                            
+  create-durable-api-client.ts                      |     100 |      100 |     100 |     100 |                                                            
+  indexed-operations.ts                             |     100 |      100 |     100 |     100 |                                                            
+  operation-storage.ts                              |     100 |      100 |     100 |     100 |                                                            
+  test-execution-state.ts                           |     100 |      100 |     100 |     100 |                                                            
+  utils.ts                                          |     100 |      100 |     100 |     100 |                                                            
+ src/test-runner/common/operations                  |   94.89 |    89.79 |   96.42 |   94.89 |                                                            
+  operation-with-data.ts                            |   94.89 |    89.79 |   96.42 |   94.89 | 218,234,257,325,337                                        
+ src/test-runner/local                              |   82.18 |    64.13 |      80 |   83.65 |                                                            
+  index.ts                                          |     100 |      100 |     100 |     100 |                                                            
+  invoke-handler.ts                                 |      80 |      100 |    62.5 |      80 | 41-47                                                      
+  local-durable-test-runner.ts                      |      90 |     87.5 |   77.77 |      90 | 173-187,432-434                                            
+  local-runner-storage.ts                           |      80 |      100 |      50 |      80 | 19                                                         
+  result-formatter.ts                               |   49.12 |    21.73 |   84.61 |    54.9 | 73-115                                                     
+  test-execution-orchestrator.ts                    |    90.1 |    83.51 |   85.29 |      90 | 74,139,156,256,274,293,300,326,359,365,417,458,570,636-648 
+ src/test-runner/local/api-client                   |     100 |      100 |     100 |     100 |                                                            
+  checkpoint-worker-api-client.ts                   |     100 |      100 |     100 |     100 |                                                            
+ src/test-runner/local/operations                   |     100 |      100 |     100 |     100 |                                                            
+  function-storage.ts                               |     100 |      100 |     100 |     100 |                                                            
+  invocation-tracker.ts                             |     100 |      100 |     100 |     100 |                                                            
+  local-operation-storage.ts                        |     100 |      100 |     100 |     100 |                                                            
+  operation-wait-manager.ts                         |     100 |      100 |     100 |     100 |                                                            
+  status-matcher.ts                                 |     100 |      100 |     100 |     100 |                                                            
+ src/test-runner/local/orchestration                |   98.38 |    94.11 |     100 |   98.36 |                                                            
+  queue-scheduler.ts                                |   97.67 |    91.66 |     100 |   97.61 | 110                                                        
+  timer-scheduler.ts                                |     100 |      100 |     100 |     100 |                                                            
+ src/test-runner/local/real-timers                  |     100 |      100 |     100 |     100 |                                                            
+  real-timers.ts                                    |     100 |      100 |     100 |     100 |                                                            
+ src/test-runner/local/worker                       |   98.61 |    95.83 |     100 |   98.61 |                                                            
+  checkpoint-worker-manager.ts                      |   98.03 |       95 |     100 |   98.03 | 37                                                         
+  worker-client-api-handler.ts                      |     100 |      100 |     100 |     100 |                                                            
+ src/test-runner/types                              |     100 |      100 |     100 |     100 |                                                            
+  durable-operation.ts                              |     100 |      100 |     100 |     100 |                                                            
+----------------------------------------------------|---------|----------|---------|---------|------------------------------------------------------------
+
+Test Suites: 68 passed, 68 total
+Tests:       3 skipped, 1164 passed, 1167 total
+Snapshots:   0 total
+Time:        6.871 s
+Ran all test suites.
+
+> @aws/durable-execution-sdk-js-examples@0.1.0 test
+> jest && vitest run
+
+sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+PASS src/examples/promise/all-wait/promise-all-wait.test.ts (8.896 s)
+PASS src/examples/promise/unhandled-rejection/promise-unhandled-rejection.test.ts (9.382 s)
+sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+PASS src/examples/concurrent/operations/concurrent-operations.test.ts (9.879 s)
+sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+PASS src/examples/promise/combinators/promise-combinators.test.ts
+PASS src/examples/wait-for-callback/multiple-invocations/wait-for-callback-multiple-invocations.test.ts
+sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+PASS src/examples/parallel/wait/parallel-wait.test.ts (5.438 s)
+PASS src/examples/concurrent/callback-wait/concurrent-callback-wait.test.ts
+PASS src/examples/create-callback/timeout/create-callback-timeout.test.ts
+PASS src/examples/force-checkpointing/multiple-wait/force-checkpointing-multiple-wait.test.ts (15.227 s)
+PASS src/examples/force-checkpointing/step-retry/force-checkpointing.test.ts (15.214 s)
+sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+PASS src/examples/concurrent/wait/concurrent-wait.test.ts (15.831 s)
+PASS src/examples/force-checkpointing/callback/force-checkpointing-callback.test.ts (16.329 s)
+PASS src/examples/concurrent/callback-submitter/concurrent-callback-submitter.test.ts
+sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+PASS src/examples/invoke/simple/invoke-simple.test.ts
+PASS src/examples/wait-for-callback/failing-submitter/wait-for-callback-failing-submitter.test.ts
+PASS src/examples/promise/any/promise-any.test.ts
+PASS src/examples/promise/all-settled/promise-all-settled.test.ts
+PASS src/examples/parallel/failure-threshold-exceeded-count/parallel-failure-threshold-exceeded-count.test.ts
+PASS src/examples/wait-for-callback/submitter-failure-catchable/wait-for-callback-submitter-failure-catchable.test.ts
+PASS src/examples/logger-test/log-levels/logger-log-levels.test.ts
+PASS src/examples/wait-for-callback/basic/wait-for-callback.test.ts
+PASS src/examples/map/min-successful/map-min-successful.test.ts
+PASS src/examples/parallel/min-successful-with-passing-threshold/min-successful-with-passing-threshold.test.ts
+sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+PASS src/examples/create-callback/heartbeat/create-callback-heartbeat.test.ts
+PASS src/examples/parallel/min-successful/parallel-min-successful.test.ts
+PASS src/examples/step/steps-with-retry/steps-with-retry.test.ts
+  ● Console
+
+    console.error
+      Failing - DDB Retries Exhausted.  StepError: Persistent failure
+          at Function.fromErrorObject (/Users/parpooya/workplace/aws-durable-execution-sdk-js/packages/aws-durable-execution-sdk-js/src/errors/durable-error/durable-error.ts:79:16)
+          at executeStepLogic (/Users/parpooya/workplace/aws-durable-execution-sdk-js/packages/aws-durable-execution-sdk-js/src/handlers/step-handler/step-handler.ts:342:41)
+          at executeStepLogic (/Users/parpooya/workplace/aws-durable-execution-sdk-js/packages/aws-durable-execution-sdk-js/src/handlers/step-handler/step-handler.ts:379:18)
+          at executeStepLogic (/Users/parpooya/workplace/aws-durable-execution-sdk-js/packages/aws-durable-execution-sdk-js/src/handlers/step-handler/step-handler.ts:379:18)
+          at executeStepLogic (/Users/parpooya/workplace/aws-durable-execution-sdk-js/packages/aws-durable-execution-sdk-js/src/handlers/step-handler/step-handler.ts:379:18)
+          at executeStepLogic (/Users/parpooya/workplace/aws-durable-execution-sdk-js/packages/aws-durable-execution-sdk-js/src/handlers/step-handler/step-handler.ts:379:18)
+          at executeStepLogic (/Users/parpooya/workplace/aws-durable-execution-sdk-js/packages/aws-durable-execution-sdk-js/src/handlers/step-handler/step-handler.ts:379:18)
+          at /Users/parpooya/workplace/aws-durable-execution-sdk-js/packages/aws-durable-execution-sdk-js/src/handlers/step-handler/step-handler.ts:220:14 {
+        cause: [Error: Persistent failure],
+        errorData: undefined,
+        stackTrace: undefined,
+        errorType: 'StepError'
+      }
+
+      66 |       }
+      67 |     } catch (e) {
+    > 68 |       console.error("Failing - DDB Retries Exhausted. ", e);
+         |               ^
+      69 |       throw e;
+      70 |     }
+      71 |
+
+      at src/examples/step/steps-with-retry/steps-with-retry.ts:68:15
+      at runHandler (../aws-durable-execution-sdk-js/src/with-durable-execution.ts:120:34)
+      at InvokeHandler.invoke (../aws-durable-execution-sdk-js-testing/src/test-runner/local/invoke-handler.ts:67:12)
+      at TestExecutionOrchestrator.invokeHandler (../aws-durable-execution-sdk-js-testing/src/test-runner/local/test-execution-orchestrator.ts:596:21)
+      at QueueScheduler.processQueue (../aws-durable-execution-sdk-js-testing/src/test-runner/local/orchestration/queue-scheduler.ts:122:11)
+
+    console.error
+      Failing - DDB Item Not Found.
+
+      71 |
+      72 |     if (!item) {
+    > 73 |       console.error("Failing - DDB Item Not Found.");
+         |               ^
+      74 |       throw new Error("Item Not Found");
+      75 |     }
+      76 |
+
+      at src/examples/step/steps-with-retry/steps-with-retry.ts:73:15
+      at runHandler (../aws-durable-execution-sdk-js/src/with-durable-execution.ts:120:34)
+      at InvokeHandler.invoke (../aws-durable-execution-sdk-js-testing/src/test-runner/local/invoke-handler.ts:67:12)
+      at TestExecutionOrchestrator.invokeHandler (../aws-durable-execution-sdk-js-testing/src/test-runner/local/test-execution-orchestrator.ts:596:21)
+      at QueueScheduler.processQueue (../aws-durable-execution-sdk-js-testing/src/test-runner/local/orchestration/queue-scheduler.ts:122:11)
+
+PASS src/examples/create-callback/error-instance/error-instance.test.ts
+PASS src/examples/run-in-child-context/checkpoint-size-limit/run-in-child-context-checkpoint-size-limit.test.ts
+PASS src/examples/wait-for-callback/anonymous/wait-for-callback-anonymous.test.ts
+PASS src/examples/map/high-concurrency-invoke/map-high-concurrency-invoke.test.ts
+PASS src/examples/wait-for-callback/timeout/wait-for-callback-timeout.test.ts
+PASS src/examples/promise/race-wait/promise-race-wait.test.ts
+PASS src/examples/wait-for-callback/failures/wait-for-callback-failures.test.ts
+PASS src/examples/promise/replay/promise-replay.test.ts
+sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+FAIL src/__tests__/run-durable.integration.test.ts (21.59 s)
+  ● run-durable CLI Integration Tests with format=cjs › End-to-End Execution › should successfully execute test handler end-to-end
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+    "
+
+      37 |         const { stdout, stderr, exitCode } = runDurableCli([testHandlerPath]);
+      38 |
+    > 39 |         expect(stderr).toBe("");
+         |                        ^
+      40 |
+      41 |         const lines = stdout.split("\n");
+      42 |         expect(lines[0]).toContain("Running durable function from");
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:39:24)
+
+  ● run-durable CLI Integration Tests with format=cjs › End-to-End Execution › should successfully execute with custom handler export
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+    "
+
+      52 |         ]);
+      53 |
+    > 54 |         expect(stderr).toBe("");
+         |                        ^
+      55 |         const lines = stdout.split("\n");
+      56 |         expect(lines[0]).toContain("Running durable function from");
+      57 |         expect(lines.slice(1)).toMatchSnapshot();
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:54:24)
+
+  ● run-durable CLI Integration Tests with format=cjs › Core Error Cases › should error when file does not exist
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 126
+
+      66 |         ]);
+      67 |
+    > 68 |         expect(exitCode).toBe(1);
+         |                          ^
+      69 |         expect(stdout).toBe("");
+      70 |         expect(stderr).toMatchSnapshot();
+      71 |       });
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:68:26)
+
+  ● run-durable CLI Integration Tests with format=cjs › Core Error Cases › should error when handler export not found
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 126
+
+      78 |         ]);
+      79 |
+    > 80 |         expect(exitCode).toBe(1);
+         |                          ^
+      81 |         expect(stdout).toBe("");
+      82 |         expect(stderr).toContain(
+      83 |           "Error: Export 'nonExistentHandler' not found in ",
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:80:26)
+
+  ● run-durable CLI Integration Tests with format=mjs › End-to-End Execution › should successfully execute test handler end-to-end
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+    "
+
+      37 |         const { stdout, stderr, exitCode } = runDurableCli([testHandlerPath]);
+      38 |
+    > 39 |         expect(stderr).toBe("");
+         |                        ^
+      40 |
+      41 |         const lines = stdout.split("\n");
+      42 |         expect(lines[0]).toContain("Running durable function from");
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:39:24)
+
+  ● run-durable CLI Integration Tests with format=mjs › End-to-End Execution › should successfully execute with custom handler export
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+    "
+
+      52 |         ]);
+      53 |
+    > 54 |         expect(stderr).toBe("");
+         |                        ^
+      55 |         const lines = stdout.split("\n");
+      56 |         expect(lines[0]).toContain("Running durable function from");
+      57 |         expect(lines.slice(1)).toMatchSnapshot();
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:54:24)
+
+  ● run-durable CLI Integration Tests with format=mjs › Core Error Cases › should error when file does not exist
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 126
+
+      66 |         ]);
+      67 |
+    > 68 |         expect(exitCode).toBe(1);
+         |                          ^
+      69 |         expect(stdout).toBe("");
+      70 |         expect(stderr).toMatchSnapshot();
+      71 |       });
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:68:26)
+
+  ● run-durable CLI Integration Tests with format=mjs › Core Error Cases › should error when handler export not found
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 126
+
+      78 |         ]);
+      79 |
+    > 80 |         expect(exitCode).toBe(1);
+         |                          ^
+      81 |         expect(stdout).toBe("");
+      82 |         expect(stderr).toContain(
+      83 |           "Error: Export 'nonExistentHandler' not found in ",
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:80:26)
+
+PASS src/examples/wait/unawaited/wait-unawaited.test.ts
+PASS src/examples/wait-for-callback/heartbeat-sends/wait-for-callback-heartbeat-sends.test.ts
+{"requestId":"e240bfa0-6cc5-40c2-9c22-69997593af9c","timestamp":"2026-03-11T22:29:51.729Z","level":"INFO","executionArn":"d301a44a-68a2-4e88-9dba-da777542a8f1","operationId":"98c6f2c2287f4c73","attempt":1,"message":"Submitting callback to external system { callbackId: 'eyJleGVjdXRpb25JZCI6ImQzMDFhNDRhLTY4YTItNGU4OC05ZGJhLWRhNzc3NTQyYThmMSIsIm9wZXJhdGlvbklkIjoiZWE2NmMwNmMxZTFjMDVmYSIsInRva2VuIjoiMDk4MzdlNDgtYWI2Yi00MjNhLWI4YzEtNzllY2E2NTA3ZjYyIn0=' }"}
+{"requestId":"e240bfa0-6cc5-40c2-9c22-69997593af9c","timestamp":"2026-03-11T22:29:51.729Z","level":"INFO","executionArn":"d301a44a-68a2-4e88-9dba-da777542a8f1","operationId":"98c6f2c2287f4c73","attempt":1,"message":"Successfully submitted callback { callbackId: 'eyJleGVjdXRpb25JZCI6ImQzMDFhNDRhLTY4YTItNGU4OC05ZGJhLWRhNzc3NTQyYThmMSIsIm9wZXJhdGlvbklkIjoiZWE2NmMwNmMxZTFjMDVmYSIsInRva2VuIjoiMDk4MzdlNDgtYWI2Yi00MjNhLWI4YzEtNzllY2E2NTA3ZjYyIn0=' }"}
+{"requestId":"05287af5-f937-4f04-bd7c-708d54fc96ec","timestamp":"2026-03-11T22:29:51.949Z","level":"INFO","executionArn":"81411b05-9f65-4acf-a387-8f084ec9041b","operationId":"98c6f2c2287f4c73","attempt":1,"message":"Submitting callback to external system { callbackId: 'eyJleGVjdXRpb25JZCI6IjgxNDExYjA1LTlmNjUtNGFjZi1hMzg3LThmMDg0ZWM5MDQxYiIsIm9wZXJhdGlvbklkIjoiZWE2NmMwNmMxZTFjMDVmYSIsInRva2VuIjoiZWYyY2MwZGQtY2NlNy00YzNkLTk1MDEtOGM3NzY1ZTg2NjBkIn0=' }"}
+{"requestId":"05287af5-f937-4f04-bd7c-708d54fc96ec","timestamp":"2026-03-11T22:29:53.058Z","level":"INFO","executionArn":"81411b05-9f65-4acf-a387-8f084ec9041b","operationId":"98c6f2c2287f4c73","attempt":2,"message":"Submitting callback to external system { callbackId: 'eyJleGVjdXRpb25JZCI6IjgxNDExYjA1LTlmNjUtNGFjZi1hMzg3LThmMDg0ZWM5MDQxYiIsIm9wZXJhdGlvbklkIjoiZWE2NmMwNmMxZTFjMDVmYSIsInRva2VuIjoiZWYyY2MwZGQtY2NlNy00YzNkLTk1MDEtOGM3NzY1ZTg2NjBkIn0=' }"}
+{"requestId":"05287af5-f937-4f04-bd7c-708d54fc96ec","timestamp":"2026-03-11T22:29:54.099Z","level":"INFO","executionArn":"81411b05-9f65-4acf-a387-8f084ec9041b","operationId":"98c6f2c2287f4c73","attempt":3,"message":"Submitting callback to external system { callbackId: 'eyJleGVjdXRpb25JZCI6IjgxNDExYjA1LTlmNjUtNGFjZi1hMzg3LThmMDg0ZWM5MDQxYiIsIm9wZXJhdGlvbklkIjoiZWE2NmMwNmMxZTFjMDVmYSIsInRva2VuIjoiZWYyY2MwZGQtY2NlNy00YzNkLTk1MDEtOGM3NzY1ZTg2NjBkIn0=' }"}
+PASS src/examples/step/with-retry/step-with-retry.test.ts
+  ● Console
+
+    console.log
+      ┌─────────┬──────────┬──────┬────────┬─────────┬─────────────┬────────────────────────────┬────────────────────────────┬──────────┐
+      │ (index) │ parentId │ name │ type   │ subType │ status      │ startTime                  │ endTime                    │ duration │
+      ├─────────┼──────────┼──────┼────────┼─────────┼─────────────┼────────────────────────────┼────────────────────────────┼──────────┤
+      │ 0       │ '-'      │ '-'  │ 'STEP' │ 'Step'  │ 'SUCCEEDED' │ '2026-03-11T22:29:51.847Z' │ '2026-03-11T22:29:51.994Z' │ '147ms'  │
+      └─────────┴──────────┴──────┴────────┴─────────┴─────────────┴────────────────────────────┴────────────────────────────┴──────────┘
+
+      at Object.print (../aws-durable-execution-sdk-js-testing/src/test-runner/local/result-formatter.ts:115:17)
+
+PASS src/examples/large-payload/large-payload.test.ts
+{"requestId":"05287af5-f937-4f04-bd7c-708d54fc96ec","timestamp":"2026-03-11T22:29:56.142Z","level":"INFO","executionArn":"81411b05-9f65-4acf-a387-8f084ec9041b","operationId":"98c6f2c2287f4c73","attempt":4,"message":"Submitting callback to external system { callbackId: 'eyJleGVjdXRpb25JZCI6IjgxNDExYjA1LTlmNjUtNGFjZi1hMzg3LThmMDg0ZWM5MDQxYiIsIm9wZXJhdGlvbklkIjoiZWE2NmMwNmMxZTFjMDVmYSIsInRva2VuIjoiZWYyY2MwZGQtY2NlNy00YzNkLTk1MDEtOGM3NzY1ZTg2NjBkIn0=' }"}
+{"requestId":"7ef4cd71-ce60-4e25-932d-09c17ada3fa5","timestamp":"2026-03-11T22:29:54.237Z","level":"INFO","executionArn":"652c696b-46eb-4ca1-abf5-ff391981d989","message":"Before wait"}
+PASS src/examples/create-callback/simple/create-callback.test.ts
+PASS src/examples/wait-for-callback/submitter-retry-success/wait-for-callback-submitter-retry-success.test.ts
+PASS src/examples/parallel/tolerated-failure-percentage/parallel-tolerated-failure-percentage.test.ts
+{"requestId":"7ef4cd71-ce60-4e25-932d-09c17ada3fa5","timestamp":"2026-03-11T22:29:54.286Z","level":"INFO","executionArn":"652c696b-46eb-4ca1-abf5-ff391981d989","message":"After wait"}
+PASS src/examples/logger-test/after-wait/logger-after-wait.test.ts
+PASS src/examples/run-in-child-context/basic/run-in-child-context.test.ts
+PASS src/examples/wait-for-callback/error-instance-timeout/error-instance-timeout.test.ts
+PASS src/examples/map/large-scale/map-large-scale.test.ts
+PASS src/examples/step/named/step-named.test.ts
+PASS src/examples/promise/all/promise-all.test.ts
+PASS src/examples/run-in-child-context/with-failing-step/run-in-child-context-failing-step.test.ts
+PASS src/examples/logger-test/after-callback/logger-after-callback.test.ts
+PASS src/examples/retry-exhaustion/retry-exhaustion.test.ts
+PASS src/examples/parallel/error-preservation/parallel-error-preservation.test.ts
+PASS src/examples/map/error-preservation/map-error-preservation.test.ts
+PASS src/examples/create-callback/concurrent/create-callback-concurrent.test.ts
+PASS src/examples/promise/race/promise-race.test.ts
+PASS src/examples/parallel/heterogeneous/parallel-heterogeneous.test.ts
+PASS src/examples/wait-for-callback/error-instance-submitter/error-instance-submitter.test.ts
+PASS src/examples/run-in-child-context/large-data/run-in-child-context-large-data.test.ts
+PASS src/examples/logger-test/simple-powertools-logger/simple-powertools-logger.test.ts
+PASS src/examples/wait-for-callback/mixed-ops/wait-for-callback-mixed-ops.test.ts
+PASS src/examples/force-checkpointing/invoke/force-checkpointing-invoke.test.ts (24.588 s)
+PASS src/examples/wait-for-condition/wait-for-condition.test.ts
+PASS src/examples/wait-for-callback/nested/wait-for-callback-nested.test.ts
+PASS src/examples/context-validation/parent-context-in-child/parent-context-in-child.test.ts
+PASS src/examples/step/basic/step-basic.test.ts
+PASS src/examples/multiple-waits/multiple-waits.test.ts
+PASS src/examples/map/tolerated-failure-percentage/map-tolerated-failure-percentage.test.ts
+PASS src/examples/parallel/basic/parallel-basic.test.ts
+PASS src/examples/wait-for-callback/error-instance-failure/error-instance-failure.test.ts
+PASS src/examples/create-callback/serdes/create-callback-serdes.test.ts
+PASS src/examples/parallel/min-successful-with-callback/parallel-min-successful-callback.test.ts
+PASS src/examples/step/step-error-determinism/step-error-determinism.test.ts
+PASS src/examples/map/failure-threshold-exceeded-percentage/map-failure-threshold-exceeded-percentage.test.ts
+PASS src/examples/comprehensive-operations/comprehensive-operations.test.ts
+PASS src/examples/wait/basic/wait.test.ts
+PASS src/examples/wait/named/wait-named.test.ts
+PASS src/examples/logger-test/powertools-logger/powertools-logger.test.ts
+PASS src/examples/simple-execution/simple-execution.test.ts
+PASS src/examples/map/empty/map-empty.test.ts
+PASS src/examples/create-callback/mixed-ops/create-callback-mixed-ops.test.ts
+PASS src/examples/wait-for-callback/serdes/wait-for-callback-serdes.test.ts
+{"requestId":"af5a3bb7-7ccf-48e5-a682-6047e551e6bf","timestamp":"2026-03-11T22:29:56.729Z","level":"INFO","executionArn":"3350a982-777d-40bf-affa-786f8ce8a533","operationId":"c4ca4238a0b92382","attempt":1,"message":"Created user: { fullName: 'John Doe' }"}
+PASS src/examples/map/tolerated-failure-count/map-tolerated-failure-count.test.ts
+PASS src/examples/undefined-results/undefined-results.test.ts
+{"requestId":"c0bb33d6-800f-441d-8f6b-9dbb69f5e305","timestamp":"2026-03-11T22:29:57.924Z","level":"INFO","executionArn":"ebec22df-bbfc-4658-9c03-ec0857f09e83","operationId":"c4ca4238a0b92382","attempt":1,"message":"Created user: { fullName: 'Alice Smith' }"}
+PASS src/examples/serde/basic/serde-basic.test.ts
+PASS src/examples/parallel/empty/parallel-empty.test.ts
+PASS src/examples/no-replay-execution/no-replay-execution.test.ts
+PASS src/examples/context-validation/parent-context-in-wait-condition/parent-context-in-wait-condition.test.ts
+PASS src/examples/block-example/block-example.test.ts
+PASS src/examples/parallel/tolerated-failure-count/parallel-tolerated-failure-count.test.ts
+PASS src/examples/map/basic/map-basic.test.ts
+PASS src/examples/map-completion-config-issue/map-completion-config-issue.test.ts
+  ● Console
+
+    console.log
+      === ACTUAL RESULTS ===
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:36:15)
+
+    console.log
+      Total items processed: 4
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:37:15)
+
+    console.log
+      Successful count: 2
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:38:15)
+
+    console.log
+      Failed count: 0
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:39:15)
+
+    console.log
+      Has failures: false
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:40:15)
+
+    console.log
+      Batch status: SUCCEEDED
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:41:15)
+
+    console.log
+      Completion reason: MIN_SUCCESSFUL_REACHED
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:42:15)
+
+    console.log
+      Successful items: [
+        {
+          "index": 0,
+          "itemId": 1
+        },
+        {
+          "index": 2,
+          "itemId": 3
+        }
+      ]
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:43:15)
+
+    console.log
+      Failed items: []
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:47:15)
+
+    console.log
+      === EXECUTION DETAILS ===
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:60:15)
+
+    console.log
+      Total operations: 9
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:62:15)
+
+    console.log
+      Map operation child count: 4
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:65:15)
+
+    console.log
+      === ALL OPERATIONS ===
+
+      at Object.<anonymous> (src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:71:15)
+
+    console.log
+      0: completion-config-items - CONTEXT
+
+      at src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:73:17
+          at Array.forEach (<anonymous>)
+
+    console.log
+      1: map-item-0 - CONTEXT
+
+      at src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:73:17
+          at Array.forEach (<anonymous>)
+
+    console.log
+      2: process-item-0 - STEP
+
+      at src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:73:17
+          at Array.forEach (<anonymous>)
+
+    console.log
+      3: map-item-1 - CONTEXT
+
+      at src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:73:17
+          at Array.forEach (<anonymous>)
+
+    console.log
+      4: process-item-1 - STEP
+
+      at src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:73:17
+          at Array.forEach (<anonymous>)
+
+    console.log
+      5: map-item-2 - CONTEXT
+
+      at src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:73:17
+          at Array.forEach (<anonymous>)
+
+    console.log
+      6: process-item-2 - STEP
+
+      at src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:73:17
+          at Array.forEach (<anonymous>)
+
+    console.log
+      7: map-item-3 - CONTEXT
+
+      at src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:73:17
+          at Array.forEach (<anonymous>)
+
+    console.log
+      8: process-item-3 - STEP
+
+      at src/examples/map-completion-config-issue/map-completion-config-issue.test.ts:73:17
+          at Array.forEach (<anonymous>)
+
+PASS src/examples/create-callback/failures/create-callback-failures.test.ts
+PASS src/examples/wait-for-callback/child-context/wait-for-callback-child-context.test.ts
+  ● Console
+
+    console.log
+      child callback op {
+        Id: '3c46a0407be60a1f',
+        ParentId: 'c81e728d9d4c2f63',
+        Name: 'child-callback-op',
+        Type: 'CONTEXT',
+        StartTimestamp: 2026-03-11T22:29:57.770Z,
+        Status: 'STARTED',
+        SubType: 'WaitForCallback',
+        ContextDetails: { ReplayChildren: undefined }
+      }
+
+      at Object.<anonymous> (src/examples/wait-for-callback/child-context/wait-for-callback-child-context.test.ts:33:15)
+
+PASS src/examples/hello-world/hello-world.test.ts
+PASS src/examples/map/virtual-context/map-virtual-context.test.ts
+PASS src/examples/parallel/virtual-context/parallel-virtual-context.test.ts
+PASS scripts/__tests__/generate-sam-template.test.ts
+PASS src/examples/wait-for-callback/quick-completion/wait-for-callback-quick-completion.test.ts
+PASS src/examples/handler-error/handler-error.test.ts
+PASS src/examples/parallel/failure-threshold-exceeded-percentage/parallel-failure-threshold-exceeded-percentage.test.ts
+PASS src/examples/map/failure-threshold-exceeded-count/map-failure-threshold-exceeded-count.test.ts
+{"requestId":"1dbb193d-8d65-4868-b2b1-40a409095366","timestamp":"2026-03-11T22:29:58.528Z","level":"INFO","executionArn":"881825c4-12ad-4260-93a6-ae9c421c9bce","message":"Starting tenant-enabled target function { waitTime: 1 }"}
+{"requestId":"1dbb193d-8d65-4868-b2b1-40a409095366","timestamp":"2026-03-11T22:29:59.580Z","level":"INFO","executionArn":"881825c4-12ad-4260-93a6-ae9c421c9bce","message":"Tenant target function completed"}
+PASS src/examples/context-validation/parent-context-in-step/parent-context-in-step.test.ts
+PASS src/examples/invoke/tenant-id/invoke-tenant-id.test.ts
+
+Summary of all failing tests
+FAIL src/__tests__/run-durable.integration.test.ts (21.59 s)
+  ● run-durable CLI Integration Tests with format=cjs › End-to-End Execution › should successfully execute test handler end-to-end
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+    "
+
+      37 |         const { stdout, stderr, exitCode } = runDurableCli([testHandlerPath]);
+      38 |
+    > 39 |         expect(stderr).toBe("");
+         |                        ^
+      40 |
+      41 |         const lines = stdout.split("\n");
+      42 |         expect(lines[0]).toContain("Running durable function from");
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:39:24)
+
+  ● run-durable CLI Integration Tests with format=cjs › End-to-End Execution › should successfully execute with custom handler export
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+    "
+
+      52 |         ]);
+      53 |
+    > 54 |         expect(stderr).toBe("");
+         |                        ^
+      55 |         const lines = stdout.split("\n");
+      56 |         expect(lines[0]).toContain("Running durable function from");
+      57 |         expect(lines.slice(1)).toMatchSnapshot();
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:54:24)
+
+  ● run-durable CLI Integration Tests with format=cjs › Core Error Cases › should error when file does not exist
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 126
+
+      66 |         ]);
+      67 |
+    > 68 |         expect(exitCode).toBe(1);
+         |                          ^
+      69 |         expect(stdout).toBe("");
+      70 |         expect(stderr).toMatchSnapshot();
+      71 |       });
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:68:26)
+
+  ● run-durable CLI Integration Tests with format=cjs › Core Error Cases › should error when handler export not found
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 126
+
+      78 |         ]);
+      79 |
+    > 80 |         expect(exitCode).toBe(1);
+         |                          ^
+      81 |         expect(stdout).toBe("");
+      82 |         expect(stderr).toContain(
+      83 |           "Error: Export 'nonExistentHandler' not found in ",
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:80:26)
+
+  ● run-durable CLI Integration Tests with format=mjs › End-to-End Execution › should successfully execute test handler end-to-end
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+    "
+
+      37 |         const { stdout, stderr, exitCode } = runDurableCli([testHandlerPath]);
+      38 |
+    > 39 |         expect(stderr).toBe("");
+         |                        ^
+      40 |
+      41 |         const lines = stdout.split("\n");
+      42 |         expect(lines[0]).toContain("Running durable function from");
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:39:24)
+
+  ● run-durable CLI Integration Tests with format=mjs › End-to-End Execution › should successfully execute with custom handler export
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "sh: /Users/parpooya/.npm/_npx/a8349a57e35a328c/node_modules/.bin/run-durable: Permission denied
+    "
+
+      52 |         ]);
+      53 |
+    > 54 |         expect(stderr).toBe("");
+         |                        ^
+      55 |         const lines = stdout.split("\n");
+      56 |         expect(lines[0]).toContain("Running durable function from");
+      57 |         expect(lines.slice(1)).toMatchSnapshot();
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:54:24)
+
+  ● run-durable CLI Integration Tests with format=mjs › Core Error Cases › should error when file does not exist
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 126
+
+      66 |         ]);
+      67 |
+    > 68 |         expect(exitCode).toBe(1);
+         |                          ^
+      69 |         expect(stdout).toBe("");
+      70 |         expect(stderr).toMatchSnapshot();
+      71 |       });
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:68:26)
+
+  ● run-durable CLI Integration Tests with format=mjs › Core Error Cases › should error when handler export not found
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 126
+
+      78 |         ]);
+      79 |
+    > 80 |         expect(exitCode).toBe(1);
+         |                          ^
+      81 |         expect(stdout).toBe("");
+      82 |         expect(stderr).toContain(
+      83 |           "Error: Export 'nonExistentHandler' not found in ",
+
+      at Object.<anonymous> (src/__tests__/run-durable.integration.test.ts:80:26)
+
+
+Test Suites: 1 failed, 102 passed, 103 total
+Tests:       8 failed, 142 passed, 150 total
+Snapshots:   0 total
+Time:        29.609 s, estimated 30 s
+Ran all test suites.
+npm error Lifecycle script `test` failed with error:
+npm error code 1
+npm error path /Users/parpooya/workplace/aws-durable-execution-sdk-js/packages/aws-durable-execution-sdk-js-examples
+npm error workspace @aws/durable-execution-sdk-js-examples@0.1.0
+npm error location /Users/parpooya/workplace/aws-durable-execution-sdk-js/packages/aws-durable-execution-sdk-js-examples
+npm error command failed
+npm error command sh -c jest && vitest run
