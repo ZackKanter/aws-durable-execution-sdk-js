@@ -309,6 +309,7 @@ export function createTests<ResultType>(testDef: TestDefinition<ResultType>) {
       LocalDurableTestRunner.setupTestEnvironment({
         ...testDef.localRunnerConfig,
         skipTime: testHelper.isTimeSkipping,
+        suppressLogs: testDef.localRunnerConfig?.suppressLogs ?? true,
       }),
     );
     afterAll(() => LocalDurableTestRunner.teardownTestEnvironment());

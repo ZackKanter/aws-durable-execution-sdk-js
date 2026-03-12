@@ -96,6 +96,28 @@ export interface LocalDurableTestRunnerSetupParameters {
    * bugs, race conditions, or other issues.
    */
   checkpointDelay?: number;
+
+  /**
+   * Whether to suppress JSON structured logs during test execution.
+   *
+   * When set to `true`, the test runner will configure a no-op logger to prevent
+   * JSON structured logs from appearing in test output. This is useful for cleaner
+   * test output when the structured logs are not needed for debugging.
+   *
+   * When set to `false` or undefined, normal structured logging will be used.
+   *
+   * @defaultValue true
+   *
+   * @example
+   * ```typescript
+   * // Suppress logs for cleaner test output (default)
+   * await LocalDurableTestRunner.setupTestEnvironment({ suppressLogs: true });
+   *
+   * // Enable logs for debugging
+   * await LocalDurableTestRunner.setupTestEnvironment({ suppressLogs: false });
+   * ```
+   */
+  suppressLogs?: boolean;
 }
 
 /**
@@ -137,6 +159,7 @@ export class LocalDurableTestRunner<
   private operationIndex: IndexedOperations;
   private static skipTime = false;
   private static fakeClock: InstalledClock | undefined;
+  private static originalLogLevel: string | undefined;
   private readonly handlerFunction: DurableLambdaHandler;
   private readonly functionStorage: FunctionStorage;
   private readonly durableApi: DurableApiClient;
@@ -486,6 +509,17 @@ export class LocalDurableTestRunner<
         now: Date.now(),
       });
     }
+
+    // Configure logging based on suppressLogs option
+    const suppressLogs = params?.suppressLogs ?? true;
+    if (suppressLogs) {
+      // Store original log level to restore later
+      this.originalLogLevel = process.env.AWS_LAMBDA_LOG_LEVEL;
+      // Set log level to FATAL (priority 6) to suppress all logs
+      // Since FATAL is not implemented, use a high priority value
+      process.env.AWS_LAMBDA_LOG_LEVEL = "FATAL";
+    }
+
     return CheckpointWorkerManager.getInstance({
       checkpointDelaySettings: params?.checkpointDelay,
     }).setup();
@@ -540,6 +574,16 @@ export class LocalDurableTestRunner<
   static async teardownTestEnvironment() {
     this.fakeClock?.uninstall();
     this.fakeClock = undefined;
+
+    // Restore original log level
+    if (this.originalLogLevel !== undefined) {
+      process.env.AWS_LAMBDA_LOG_LEVEL = this.originalLogLevel;
+      this.originalLogLevel = undefined;
+    } else if (process.env.AWS_LAMBDA_LOG_LEVEL === "FATAL") {
+      // If we set it to FATAL and there was no original value, remove it
+      delete process.env.AWS_LAMBDA_LOG_LEVEL;
+    }
+
     return CheckpointWorkerManager.getInstance().teardown();
   }
 }
